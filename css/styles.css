@@ -1,0 +1,271 @@
+:root {
+    --main-color: #fed700;
+    --primary-bs-color: #0d6efd;
+    --main-trans: .3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: "Commissioner", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Start of Navbar  */
+.navbar {
+    background-color: #DDD;
+    padding: 12px 0;
+}
+
+.navbar .navbar-brand {
+    width: 200px;
+}
+
+.navbar .navbar-brand img {
+    width: 100%;
+}
+
+.navbar form {
+    flex: 1;
+}
+
+.navbar form button {
+    margin-left: 20px;
+}
+
+.navbar form button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar form button:hover a {
+    color: #FFF !important;
+}
+
+.navbar .user-info {
+    min-width: 200px;
+    display: none;
+}
+
+@media(max-width:478px) {
+    .navbar .user-info {
+        width: 100%;
+        justify-content: space-evenly !important;
+    }
+}
+
+.navbar .user-info .shopping-cart {
+    cursor: pointer;
+}
+
+.navbar .user-info .badge {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    background-color: var(--main-color);
+    color: #272626;
+    top: -18px;
+    right: -8px;
+}
+
+.navbar .user-info button a {
+    transition: var(--main-trans);
+}
+
+.navbar .user-info button:hover a {
+    color: #FFF !important;
+}
+
+.navbar .user-info .shopping-cart .cart-products-div {
+    top: calc(100% + 15px);
+    left: -50px;
+    width: 200px;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .user-info .shopping-cart .cart-products-div .cart-products-list .cart-product-item {
+    background-color: #F5F5F5;
+}
+
+.increment,
+.decrement {
+    width: 30px;
+    height: 30px;
+    transition: var(--main-trans);
+    cursor: pointer;
+    border: 1px solid #6e6b6b !important;
+}
+
+.increment:hover,
+.decrement:hover {
+    background-color: #272626;
+    color: #FFF;
+}
+
+.view-all-products-btn {
+    transition: var(--main-trans);
+}
+
+.view-all-products-btn:hover {
+    background-color: #7f7d7d;
+    color: #FFF;
+}
+
+.view-all-products-btn:focus {
+    background-color: #0d6efd;
+    color: #FFF;
+}
+
+/* End of Navbar  */
+
+/* Start of Search Bar  */
+.search-bar .search-form {
+    font-size: 14px;
+}
+
+.search-bar .search-form select {
+    flex-basis: 30%;
+}
+
+.search-bar .search-form input[type="text"] {
+    flex-basis: 55%;
+}
+
+@media(max-width:991px) {
+    .search-bar .search-form select {
+        flex-basis: 35%;
+    }
+
+    .search-bar .search-form input[type="text"] {
+        flex-basis: 50%;
+    }
+}
+
+@media(max-width:767px) {
+    .search-bar .search-form select {
+        margin-bottom: 20px;
+    }
+
+    .search-bar .search-form input[type="text"] {
+        margin-bottom: 20px;
+    }
+}
+
+/* End of Search Bar  */
+
+/* Start of products grid  */
+.products-grid .card,
+.products-grid .card img {
+    transition: var(--main-trans);
+}
+
+.products-grid .card:hover {
+    border-color: var(--primary-bs-color);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+    transform: translateY(-5px);
+}
+
+.products-grid .card:hover img {
+    transform: scale(1.03);
+}
+
+.favoriteIcon {
+    cursor: pointer;
+    transition: var(--main-trans);
+    font-size: 20px;
+}
+
+.favoriteIcon:hover {
+    opacity: .7;
+}
+
+@media(max-width: 991px) {
+    .products-grid .card {
+        min-height: 525px;
+    }
+}
+
+/* End of products grid  */
+
+
+/* Start of Login Form  */
+.login-frm {
+    background-color: #fafafa;
+    width: 85%;
+    box-shadow: -.5px 0 8px rgba(0, 0, 0, 0.24);
+}
+
+@media(max-width: 365px) {
+    .login-frm {
+        align-items: center;
+    }
+
+    .note {
+        text-align: center;
+    }
+}
+
+/* End of Login Form  */
+
+/* Start of Purchased Products  */
+.purchased-products .card,
+.purchased-products .card img {
+    transition: var(--main-trans);
+}
+
+.purchased-products .card:hover {
+    border-color: var(--primary-bs-color);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+    transform: translateY(-5px);
+}
+
+.purchased-products .card:hover img {
+    transform: scale(1.03);
+}
+
+/* End of Purchased Products  */
+
+/* Start of Favorite Items  */
+.favorite-title {
+    width: fit-content;
+}
+
+.favorite-title:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -20px;
+    height: 2px;
+    width: calc(100% + 40px);
+    background-color: #dc3545;
+}
+
+.fav-product-title {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.favorite-products-container {
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.favorite-products-container .card {
+    flex: 0 0 auto;
+}
+
+/* End of Favorite Items  */
