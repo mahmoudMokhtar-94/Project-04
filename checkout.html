@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Electro | Checkout</title>
+    <link rel="icon" type="image/png" sizes="32x16" href="images/favicon.png" />
+    <!-- Font Awesome Icons Ver.06  -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <!-- My Specific Styles  -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Google Font: Commissioner  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Start of Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/site-logo.png" alt="Site Logo" />
+            </a>
+
+            <button id="barsIcon" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form id="navButtons" class="d-flex justify-content-center justify-content-lg-end">
+                    <button class="btn btn-outline-primary">
+                        <a href="login.html">Login</a>
+                    </button>
+                    <button class="btn btn-outline-success">
+                        <a style="color: #198754" href="register.html">Register</a>
+                    </button>
+                </form>
+            </div>
+
+            <div id="userInfo" class="user-info justify-content-between align-items-center me-4">
+                <p id="profileName" class="m-0 pe-3">Hello</p>
+                <div class="shopping-cart position-relative me-3">
+                    <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                    <span
+                        class="badge d-flex justify-content-center align-items-center position-absolute rounded-circle">0</span>
+
+                    <div class="cart-products-div position-absolute border rounded-2 bg-white py-2">
+                        <ul class="cart-products-list px-0"></ul>
+
+
+                        <button
+                            class="view-all-products-btn btn text-capitalize text-center border mx-auto d-block w-100 fw-medium">view
+                            all
+                            products</button>
+                    </div>
+                </div>
+                <button class="btn btn-outline-danger" id="logoutBtn">
+                    <a style="color: #dc3545" href="#">Logout</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar  -->
+
+    <!-- Start of Products Grid  -->
+    <div class="cart-products-grid mt-5">
+        <div class="container">
+            <div class="row g-3 purchased-products">
+            </div>
+        </div>
+    </div>
+    <!-- End of Products Grid  -->
+    <h4 id="total-price-label" class="text-center text-capitalize text-dark mt-5">total price: $<span
+            class="total-price-span">1000.00</span></h4>
+    <hr />
+
+    <h4 class="favorite-title mx-auto text-center text-capitalize text-dark mt-5 position-relative">favorite items</h4>
+
+    <!-- Start of Favorite Items  -->
+    <section class="container">
+        <div class="row" id="favorite-products-row">
+            <div class="col">
+                <div class="card mt-3 pb-3" style="width: 18rem;">
+                    <div class="image">
+                        <img class="d-block mx-auto" style="width: 60%;" src="images/consal.webp"
+                            alt="Consal Game Controller">
+                    </div>
+                    <div class="details">
+                        <p class="fav-product-title text-capitalize text-center mt-1">game console controller
+                        </p>
+                        <p class="fav-product-category text-capitalize text-center mt-1"><span
+                                class="fw-medium">Category:</span> Video Games
+                        </p>
+                    </div>
+                    <div class="action text-center">
+                        <i class="fa-solid fa-heart me-3 favoriteIcon" style="color:#dc3545"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Favorite Items  -->
+
+    <!-- Bootstrap Bundle with Popper.js included -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- My JS File      -->
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
